@@ -2,6 +2,8 @@ package com.sampson.project1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 public class AppHelloWorldSpring {
 
     public static void main(String[] args){
@@ -17,6 +19,8 @@ public class AppHelloWorldSpring {
         System.out.println(context.getBean("address2"));
         System.out.println(context.getBean(Person.class));
         System.out.println(context.getBean(Address.class));
+
+        Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
     }
 }
