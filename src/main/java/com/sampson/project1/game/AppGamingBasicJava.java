@@ -1,4 +1,4 @@
-package com.sampson.project1;
+package com.sampson.project1.game;
 
 import com.sampson.project1.game.GameRunner;
 import com.sampson.project1.game.MarioGame;
