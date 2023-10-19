@@ -1,4 +1,4 @@
-package com.sampson.project1;
+package com.sampson.project1.helloworld;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
