@@ -13,11 +13,10 @@ public class AppHelloWorldSpring {
         System.out.println(context.getBean("person"));
         System.out.println(context.getBean("person2MethodCall"));
         System.out.println(context.getBean("person3Parameters"));
+        System.out.println(context.getBean("person4Parameters"));
         System.out.println(context.getBean("address2"));
+        System.out.println(context.getBean(Person.class));
         System.out.println(context.getBean(Address.class));
-
-
-
 
     }
 }
