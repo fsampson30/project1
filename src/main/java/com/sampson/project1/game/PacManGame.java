@@ -1,8 +1,10 @@
 package com.sampson.project1.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
+@Qualifier("pacmanGame")
 public class PacManGame implements GamingConsole{
     @Override
     public void up() {
