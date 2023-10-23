@@ -19,6 +19,8 @@ public class GamingAppLauncherApplication {
 
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
+        System.out.println(context.getBean(YourBusinessClass.class));
+
 
     }
 }
