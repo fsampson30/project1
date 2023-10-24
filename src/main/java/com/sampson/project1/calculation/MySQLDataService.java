@@ -1,5 +1,10 @@
 package com.sampson.project1.calculation;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+@Qualifier("MySQLDataService")
 public class MySQLDataService implements DataService {
 
     @Override
