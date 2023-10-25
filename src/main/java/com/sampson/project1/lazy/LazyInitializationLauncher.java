@@ -15,5 +15,9 @@ public class LazyInitializationLauncher {
         var context = new AnnotationConfigApplicationContext(LazyInitializationLauncher.class);
 
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+        System.out.println("Initialization of context is completed.");
+
+        context.getBean(ClassB.class).doSomething();
     }
 }
