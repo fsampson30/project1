@@ -1,6 +1,7 @@
 package com.sampson.project1.prepost;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,6 +17,11 @@ public class SomeClass {
     @PostConstruct
     public void initialize(){
         someDependency.getReady();
+    }
+
+    @PreDestroy
+    public void cleanup(){
+        System.out.println("Cleanup");
     }
 }
 
