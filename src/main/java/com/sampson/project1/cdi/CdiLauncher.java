@@ -15,5 +15,7 @@ public class CdiLauncher {
         var context = new AnnotationConfigApplicationContext(CdiLauncher.class);
 
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+        System.out.println(context.getBean(BusinessService.class).getDataService());
     }
 }
