@@ -1,9 +1,12 @@
 package com.sampson.project1.cdi;
 
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
+@Named
 public class BusinessService {
 
     private DataService dataService;
@@ -12,7 +15,8 @@ public class BusinessService {
         return dataService;
     }
 
-    @Autowired
+    //@Autowired
+    @Inject
     public void setDataService(DataService dataService) {
         System.out.println("Setter Injection");
         this.dataService = dataService;
