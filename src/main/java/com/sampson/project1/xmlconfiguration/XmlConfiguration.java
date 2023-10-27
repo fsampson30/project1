@@ -1,14 +1,10 @@
 package com.sampson.project1.xmlconfiguration;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import com.sampson.project1.game.GameRunner;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-@Configuration
-@ComponentScan
 public class XmlConfiguration {
 
     public static void main(String[] args) {
@@ -16,5 +12,9 @@ public class XmlConfiguration {
         var context = new ClassPathXmlApplicationContext("contextConfiguration.xml");
 
         Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+        System.out.println(context.getBean("name"));
+        System.out.println(context.getBean("age"));
+        context.getBean(GameRunner.class).run();
     }
 }
